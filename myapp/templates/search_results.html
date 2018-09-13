@@ -1,0 +1,79 @@
+<html>
+
+<head>
+    <title>Book Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body id="RegistrationForm">
+    <div class="container">
+        <fieldset>
+
+            <body>
+                <p>You Name: <strong>{{ name }}</strong></p>
+                <p>You Email: <strong>{{ email }}</strong></p>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State province</th>
+                                <th>Country</th>
+                                <th>Website</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for publis in publisher %}
+                            <tr>
+                                <td>{{publis.name}}</td>
+                                <td>{{publis.address}}</td>
+                                <td>{{publis.city}}</td>
+                                <td>{{publis.state_province}}</td>
+                                <td>{{publis.country}}</td>
+                                <td>{{publis.website}}</td>
+                                <td>
+                                    <a href="{% url 'deletedetails' publis.id %}" ><button type="button" class="btn btn-danger">DELETE</button></a>
+                                    <a href="{% url 'editdetails' publis.id %}"><button type="button" class="btn btn-primary">EDIT</button></a>
+                                </td>
+                            </tr>
+                           
+                            {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+
+                {% if books %}
+                <p>Found {{ books|length }} book{{ books|pluralize }}.</p>
+                <ul>
+                    {% for book in books %}
+                    <li>{{ book.title }}</li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <!-- <p>No books matched your search criteria.<a href="publisher_list.htm">Click here</a></p>        -->
+                {% endif %}
+            </body>
+
+        </fieldset>
+    </div>
+</body>
+<style>
+        body#RegistrationForm {
+          background-image: url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          padding: 10px;
+        }
+      </style>
+</html>

@@ -1,0 +1,99 @@
+<html>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form class="form-horizontal" action="/update/" method="get">
+<input type="hidden" name='id' value="{{publisher.id}}">
+    <body id="RegistrationForm">
+        <div class="container">
+            <fieldset>
+                <div id="legend">
+                    <legend class="">Edit Profile</legend>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="username">Username</label>
+                    <div class="controls">
+                        <input type="text" id="username" name="username" placeholder="" class="input-xlarge" value="{{publisher.name}}">
+                    </div>
+                </div>
+
+
+                <div class="control-group">
+                    <label class="control-label" for="username">Address</label>
+                    <div class="controls">
+                        <input type="text" id="address" name="address" placeholder="" class="input-xlarge" value="{{publisher.address}}" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="username">City</label>
+                    <div class="controls">
+                        <input type="text" id="city" name="city" placeholder="" class="input-xlarge" value="{{publisher.city}}" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="username">State</label>
+                    <div class="controls">
+                        <input type="text" id="state" name="state" placeholder="" class="input-xlarge" value="{{publisher.state_province}}">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="username">Country</label>
+                    <div class="controls">
+                        <input type="text" id="country" name="country" placeholder="" class="input-xlarge" value="{{publisher.country}}" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="username">Website</label>
+                    <div class="controls">
+                        <input type="text" id="website" name="website" placeholder="" class="input-xlarge" value="{{publisher.website}}" >
+                    </div>
+                </div>
+
+                <!-- <div class="control-group">
+                    <label class="control-label" for="email">E-mail</label>
+                    <div class="controls">
+                        <input type="text" id="email" name="email" placeholder="" class="input-xlarge" value="publisher.name" >
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">Password</label>
+                    <div class="controls">
+                        <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password_confirm">Password (Confirm)</label>
+                    <div class="controls">
+                        <input type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
+                    </div>
+                </div> -->
+
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" value="Search" class="btn btn-success">Update</button>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</form>
+
+<style>
+    body#RegistrationForm {
+        background-image: url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 10px;
+    }
+</style>
+
+</html>
